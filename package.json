@@ -8,5 +8,9 @@
   "workspaces": [
     "shared",
     "backend"
-  ]
+  ],
+  "scripts": {
+    "backend": "yarn workspace backend",
+    "shared": "yarn workspace shared"
+  }
 }
