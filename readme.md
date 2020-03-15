@@ -202,10 +202,10 @@ t7yang is 18 years old.
 
 You may curious why we don't have to build `shared` before we build `backend`.
 
-`tsc` is smart enough transpile the project which reference by `backend` and transpile them if needed before transpile itself.
+`tsc` is smart enough to transpile the project which referenced by `backend` and transpile them if necessary before transpile itself.
 
 ## Summary
-By combine TypeScript project references and Yarn Workpsace, we can setup a monorepo fast and easy.
+By combining TypeScript project references and Yarn workpsace, we can setup a monorepo fast and easy.
 
 If you need more powerful monorepo features, consider to use [lerna](https://github.com/lerna/lerna) or Yarn [v2 Workspace](https://yarnpkg.com/features/workspaces).
 
