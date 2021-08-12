@@ -82,7 +82,7 @@ Run `yarn install` again in root project, yarn will hoist the same dependencies 
 ### Setting `tsconfig.json`
 A share `tsconfig.json` can place in the root project:
 
-```json
+```json5
 {
   "compilerOptions": {
     /* Basic Options */
@@ -106,7 +106,7 @@ A share `tsconfig.json` can place in the root project:
 
 For the `shared` sub project, `composite: true` field is required, other fields is optional but highly recommended, especially `outDir` and `rootDir`.
 
-```json
+```json5
 {
   "compilerOptions": {
     /* Basic Options */
@@ -123,18 +123,18 @@ For the `shared` sub project, `composite: true` field is required, other fields 
 
 Due the transpiled code of `shared` sub project is `dist`, point the `main` and `types` fields in `package.json` to `dist`.
 
-```json
+```json5
 {
-  ...
+  /* ... */
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  ...
+  /* ... */
 }
 ```
 
 For the `backend` sub project, `references` field is required. The `path` field should point to the folder contain `tsconfig.json` or the `tsconfig.json` itself (here we point to the folder for short).
 
-```json
+```json5
 {
   "compilerOptions": {
     /* Basic Options */
@@ -178,14 +178,14 @@ showUser(user);
 ### Add Script and Run
 Finally, add the `build` and `start` script for `backend`.
 
-```json
+```json5
 {
-  ...
+  /* ... */
   "scripts": {
     "build": "tsc --build",
     "start": "yarn build && node dist/index.js"
   },
-  ...
+  /* ... */
 }
 ```
 
